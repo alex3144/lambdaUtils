@@ -9,11 +9,6 @@
     "integration-test": "NODE_ENV=dev mocha --watch --watch-extensions ts --timeout 20000 --exit src/**/*/*.spec.ts"
   },
   "main": "./dist/index.js",
-  "config": {
-    "workingDir": "./dist",
-    "bootstrap": "./index.js",
-    "app": {}
-  },
   "mocha": {
     "require": [
       "ts-node/register",

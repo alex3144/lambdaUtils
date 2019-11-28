@@ -27,3 +27,7 @@ export declare function createLambdaError({ statusCode, message, errorCode }: {
     statusCode: number;
     body: any;
 };
+export declare function schemaFactory(params: any): import("json-schema").JSONSchema4;
+export declare function inputSchemaFactory(params: any): {
+    inputSchema: import("json-schema").JSONSchema4;
+};

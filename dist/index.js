@@ -8,6 +8,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const generateLambda = __importStar(require("./generate"));
+const inputSchemaFactory_1 = require("./generate/inputSchemaFactory");
 const Invoke_1 = require("./helpers/Invoke");
 const responseFormater_1 = require("./helpers/responseFormater");
 function invoke({ config, method, params, project, stage }) {
@@ -26,4 +27,12 @@ function createLambdaError({ statusCode, message, errorCode }) {
     return responseFormater_1.errorFactory({ statusCode, message, errorCode });
 }
 exports.createLambdaError = createLambdaError;
+function schemaFactory(params) {
+    return inputSchemaFactory_1.schemaFactory(params);
+}
+exports.schemaFactory = schemaFactory;
+function inputSchemaFactory(params) {
+    return inputSchemaFactory_1.inputSchemaFactory(params);
+}
+exports.inputSchemaFactory = inputSchemaFactory;
 //# sourceMappingURL=index.js.map
