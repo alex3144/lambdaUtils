@@ -6,8 +6,12 @@ exports.getArgs = (params) => wrap => {
         if (!params)
             return wrap(event);
         let paramsCompile = {};
-        lodash_1.forEach(params.bodyParams, (p) => paramsCompile[p] = lodash_1.get(event, `body.${p}`));
-        lodash_1.forEach(params.contextParams, (p) => paramsCompile[p] = lodash_1.get(event, `requestContext.authorizer.claims.${p}`));
+        lodash_1.forEach(params.bodyParams, (p) => {
+            paramsCompile[p] = lodash_1.get(event, `body.${p}`);
+        });
+        lodash_1.forEach(params.contextParams, (p) => {
+            paramsCompile[p] = lodash_1.get(event, `requestContext.authorizer.claims.${p}`);
+        });
         return wrap(paramsCompile);
     };
 };
