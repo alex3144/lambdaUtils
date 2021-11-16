@@ -20,7 +20,7 @@
     "@types/json-schema": "^7.0.3",
     "ajv": "^6.10.2",
     "aws-lambda": "^0.1.2",
-    "aws-sdk": "^2.546.0",
+    "aws-sdk": "^2.814.0",
     "dotenv": "^8.2.0",
     "expect": "^24.9.0",
     "http-errors": "^1.7.3",
