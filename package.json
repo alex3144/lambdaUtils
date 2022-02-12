@@ -18,7 +18,7 @@
   "dependencies": {
     "@types/aws-lambda": "^8.10.33",
     "@types/json-schema": "^7.0.3",
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.3",
     "aws-lambda": "^0.1.2",
     "aws-sdk": "^2.546.0",
     "dotenv": "^8.2.0",
